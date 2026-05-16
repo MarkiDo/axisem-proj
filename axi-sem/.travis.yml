@@ -1,0 +1,91 @@
+language: cpp
+
+os: linux
+
+compiler:
+  - cpp
+
+jobs: 
+  include:
+  - dist: bionic
+    env: BUILD='debug'
+    name: 'Mesher (Debug)'
+    script: ./TESTING/test_mesher.sh;
+
+    # - dist: bionic
+    #   env: BUILD='debug'
+    #   name: 'Solver, internal model (Debug)'
+    #   script: ./TESTING/test_internal.sh;
+
+  - dist: bionic
+    env: BUILD='coverage'
+    name: 'Solver, coverage'
+    script: travis_wait 30 ./TESTING/test_debug.sh;
+
+  - dist: bionic
+    env: BUILD='release'
+    name: 'Mesher (Release)'
+    script: ./TESTING/test_mesher.sh;
+
+  - dist: bionic
+    env: BUILD='release'
+    name: 'Solver, internal model (Release)'
+    script: ./TESTING/test_internal.sh;
+
+  - dist: bionic
+    env: BUILD='release'
+    name: 'Solver, external model (Release)'
+    script: ./TESTING/test_external.sh;
+
+addons:
+  apt:
+    packages:
+      - gfortran 
+      - gcc 
+      - libopenmpi-dev 
+      - libnetcdff-dev 
+      - openmpi-bin
+
+before_install:
+  - export MINICONDA=$HOME/miniconda
+  - export PATH="$MINICONDA/bin:$PATH"
+  - export TRAVIS_PYTHON_VERSION=3.8
+  - export TEST_DIR=$TRAVIS_BUILD_DIR/TESTING
+  - hash -r
+  # Install conda only if necessary
+  - source "$MINICONDA/etc/profile.d/conda.sh" || { wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+     bash miniconda.sh -b -f -p $MINICONDA; }
+  - source "$MINICONDA/etc/profile.d/conda.sh"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  # Useful for debugging any issues with conda
+  - conda info -a
+  - conda config --add channels conda-forge
+  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION click netcdf4 scipy 
+  - conda activate test-environment
+  - pip install --user cpp-coveralls
+
+
+install: 
+  - ./copytemplates.sh $BUILD
+  - make -j 4
+  
+
+after_success:
+  - if [[ $BUILD == 'coverage' ]]; then 
+    coveralls --exclude SOLVER/UTILS --exclude MESHER/UTILS --exclude TESTING --exclude MANUAL --gcov-options '\-lp'; 
+    fi
+
+after_failure:
+ - tail -n 25 $TRAVIS_BUILD_DIR/runs/*/P?/OUTPUT 
+ - cd $TRAVIS_BUILD_DIR/runs/TEST01/PX
+ - mpirun -n 4 ./axisem
+
+
+cache:
+  apt: true
+
+  directories:
+    #- $HOME/travis
+    - $HOME/miniconda
