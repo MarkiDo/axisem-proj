@@ -1,0 +1,32 @@
+            external                             background model
+             0.0017267                                time step [s]
+             1042440                         number of time steps
+            monopole                                  source type
+           vertforce                                  source type
+             gauss_0                         source time function
+               force                                      simtype
+            50.0000000                       dominant source period
+             0.0000000                            source depth [km]
+             0.0000000                            Source colatitude
+             0.0000000                             Source longitude
+    1.00000E+20                      scalar source magnitude
+                 129                          number of receivers
+             1042441          length of seismogram [time samples]
+             0.0017267                      seismogram sampling [s]
+                 145                       number of strain dumps
+            12.4997140                strain dump sampling rate [s]
+                   0                     number of snapshot dumps
+             0.0000000              snapshot dump sampling rate [s]
+                 cyl                         receiver components 
+                   0  ibeg: beginning gll index for wavefield dum
+                   4      iend: end gll index for wavefield dumps
+            87.4980011                      source shift factor [s]
+               50673               source shift factor for deltat
+               50673              source shift factor for seis_dt
+                   7        source shift factor for deltat_coarse
+            stations                           receiver file type
+             0.0000000             receiver spacing (0 if not even)
+                   T             use netcdf for wavefield output?
+               21472                                        nelem
+                8272                                    nel_fluid
+                   2                                        nproc

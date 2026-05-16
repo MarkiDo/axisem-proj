@@ -1,0 +1,3500 @@
+<?xml version="1.0" ?>
+<!DOCTYPE Xdmf SYSTEM "Xdmf.dtd" []>
+<Xdmf xmlns:xi="http://www.w3.org/2003/XInclude" Version="2.2">
+<Domain>
+
+<DataItem Name="points" ItemType="Function" Function="join($0, $1)" Dimensions="         0 2">
+    <DataItem Name="points" DataType="Float" Precision="8" Dimensions="         0" Format="HDF">
+    axisem_output.nc4:/Mesh/mesh_S
+    </DataItem>
+    <DataItem Name="points" DataType="Float" Precision="8" Dimensions="         0" Format="HDF">
+    axisem_output.nc4:/Mesh/mesh_Z
+    </DataItem>
+</DataItem>
+
+<Grid Name="CellsTime" GridType="Collection" CollectionType="Temporal">
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="    1.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                             0          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="    2.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                             1          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="    3.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                             2          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="    4.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                             3          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="    5.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                             4          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="    6.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                             5          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="    7.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                             6          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="    8.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                             7          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="    9.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                             8          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   10.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                             9          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   11.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            10          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   12.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            11          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   13.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            12          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   14.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            13          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   15.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            14          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   16.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            15          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   17.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            16          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   18.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            17          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   19.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            18          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   20.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            19          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   21.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            20          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   22.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            21          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   23.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            22          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   24.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            23          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   25.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            24          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   26.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            25          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   27.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            26          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   28.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            27          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   29.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            28          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   30.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            29          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   31.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            30          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   32.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            31          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   33.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            32          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   34.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            33          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   35.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            34          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   36.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            35          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   37.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            36          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   38.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            37          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   39.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            38          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   40.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            39          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   41.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            40          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   42.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            41          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   43.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            42          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   44.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            43          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   45.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            44          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   46.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            45          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   47.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            46          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   48.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            47          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   49.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            48          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   50.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            49          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   51.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            50          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   52.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            51          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   53.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            52          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   54.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            53          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   55.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            54          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   56.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            55          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   57.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            56          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   58.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            57          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   59.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            58          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   60.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            59          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   61.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            60          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   62.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            61          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   63.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            62          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   64.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            63          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   65.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            64          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   66.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            65          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   67.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            66          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   68.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            67          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   69.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            68          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   70.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            69          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   71.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            70          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   72.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            71          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   73.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            72          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   74.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            73          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   75.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            74          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   76.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            75          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   77.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            76          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   78.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            77          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   79.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            78          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   80.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            79          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   81.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            80          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   82.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            81          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   83.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            82          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   84.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            83          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   85.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            84          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   86.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            85          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   87.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            86          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   88.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            87          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   89.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            88          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   90.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            89          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   91.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            90          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   92.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            91          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   93.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            92          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   94.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            93          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   95.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            94          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   96.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            95          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   97.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            96          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   98.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            97          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="   99.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            98          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  100.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                            99          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  101.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           100          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  102.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           101          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  103.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           102          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  104.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           103          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  105.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           104          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  106.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           105          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  107.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           106          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  108.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           107          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  109.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           108          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  110.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           109          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  111.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           110          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  112.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           111          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  113.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           112          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  114.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           113          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  115.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           114          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  116.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           115          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  117.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           116          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  118.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           117          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  119.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           118          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  120.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           119          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  121.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           120          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  122.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           121          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  123.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           122          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  124.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           123          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  125.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           124          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  126.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           125          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  127.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           126          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  128.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           127          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  129.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           128          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  130.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           129          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  131.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           130          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  132.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           131          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  133.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           132          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  134.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           133          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  135.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           134          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  136.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           135          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  137.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           136          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  138.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           137          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  139.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           138          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  140.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           139          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  141.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           140          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  142.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           141          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  143.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           142          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  144.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           143          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+    <Grid Name="grid" GridType="Uniform">
+        <Time Value="  145.00" />
+        <Topology TopologyType="Polyvertex" NumberOfElements="         0">
+        </Topology>
+        <Geometry GeometryType="XY">
+            <DataItem Reference="XML">
+                /Xdmf/Domain/DataItem[@Name="points"]
+            </DataItem>
+        </Geometry>
+        <Attribute Name="Snapshots/disp_s" AttributeType="Scalar" Center="Node">
+            <DataItem ItemType="HyperSlab" Dimensions="         0" Type="HyperSlab">
+                <DataItem Dimensions="3 2" Format="XML">
+                           144          0 
+                             1          1 
+                             1          0
+                </DataItem>
+                <DataItem DataType="Float" Precision="8" Dimensions="       145         0" Format="HDF">
+                    axisem_output.nc4:/Snapshots/disp_s
+                </DataItem>
+
+            </DataItem>
+        </Attribute>
+    </Grid>
+
+</Grid>
+
+</Domain>
+</Xdmf>

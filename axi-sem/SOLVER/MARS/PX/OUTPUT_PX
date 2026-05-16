@@ -1,0 +1,501 @@
+    Initialized run for nproc =    2
+
+ MAIN: Welcome to AxiSEM!
+
+     Simulation started on 05/10/2026 at 00h 32min
+
+ MAIN: Reading parameters..................................
+
+        ///////////////////////////////////////////////////////////////
+        //                                                           //
+        //                  A   x   i   S   E   M                    //
+        //                                                           //
+        //                                                           //
+        //         Parallel spectral-element solution to             //
+        //                                                           //
+        //           3-D seismic wave propagation for                //
+        //                                                           //
+        //          axially symmetric background models              //
+        //                                                           //
+        //               in a spherical 2-D domain                   //
+        //                                                           //
+        //                                                           //
+        //  Authors : Tarje Nissen-Meyer (Oxford University)         //
+        //              Martin van Driel (ETH Zurich)                //
+        //                 Simon Stähler (ETH Zurich)                //
+        //                 Lion Krischer (ETH Zurich)                //
+        //                Kasra Hosseini (Oxford University)         //
+        //               Stefanie Hempel (University of Muenster)    //
+        //            Alexandre Fournier (IPG Paris)                 //
+        //                   Tony Dahlen (Princeton University)      //
+        //                                                           //
+        //   Contact:     info@axisem.info                           //
+        //   Information: http://www.axisem.info                     //
+        //   Development: http://github.com/geodynamics/axisem       //
+        //                                                           //
+        //                                                           //
+        //     If you are publishing results obtained with this      //
+        //          code, please cite this paper:                    //
+        //                                                           //
+        // (1) T. Nissen-Meyer, M. van Driel, S. C. Staehler,        //
+        //     K. Hosseini, S. Hempel, L. Auer, A. Colombi           //
+        //     and A. Fournier:                                      //
+        //     "AxiSEM: broadband 3-D seismic wavefields in          //
+        //              axisymmetric media"                          //
+        //     Solid Earth, 5, 425-445, 2014                         //
+        //     doi:10.5194/se-5-425-2014                             //
+        //                                                           //
+        //       Comprehensive description of the underlying         //
+        //           numerical analysis can be found in:             //
+        //                                                           //
+        // (2) Tarje Nissen-Meyer, F. A. Dahlen, A Fournier (2007)   //
+        //     "Spherical-earth Frechet sensitivity kernels"         //
+        //     Geophysical Journal International 168(3),1051-1066.   //
+        //     doi:10.1111/j.1365-246X.2006.03123.x                  //
+        //                                                           //
+        // (3) Tarje Nissen-Meyer, A Fournier, F. A. Dahlen (2007)   //
+        //     "A two-dimensional spectral-element method for        //
+        //        computing spherical-earth seismograms -            //
+        //        I. Moment-tensor source"                           //
+        //     Geophysical Journal International 168(3), 1067-1092.  //
+        //     doi:10.1111/j.1365-246X.2006.03121.x                  //
+        //                                                           //
+        // (4) Tarje Nissen-Meyer, A Fournier, F. A. Dahlen (2007)   //
+        //     "A two-dimensional spectral-element method for        //
+        //        computing spherical-earth seismograms -            //
+        //        II.  Waves in solid-fluid media"                   //
+        //     Geophysical Journal International 174(3), 873-888.    //
+        //     doi:10.1111/j.1365-246X.2008.03813.x                  //
+        //                                                           //
+        // (5) Martin van Driel and Tarje Nissen-Meyer (2014)        //
+        //     "Seismic wave propagation in fully anisotropic        //
+        //        axisymmetric media"                                //
+        //      Geophysical Journal International 199 (2): 880-893.  //
+        //      doi: 10.1093/gji/ggu269                              //
+        //                                                           //
+        // (6) Martin van Driel and Tarje Nissen-Meyer (2014)        //
+        //     "Optimized visco-elastic wave propagation for         //
+        //        weakly dissipative media"                          //
+        //      Geophysical Journal International 199 (2): 1078-1093.//
+        //      doi: 10.1093/gji/ggu314                              //
+        //                                                           //
+        //                                                           //
+        //  April 2018: version 1.4                                  //
+        //                                                           //
+        ///////////////////////////////////////////////////////////////
+
+        =============  I N P U T    P A R A M E T E R S ===============
+            Data I/O path:                      ./Data              
+            Info I/O path:                      ./Info              
+            Simulation length [s]:               1800.000
+            Enforced time step [s]:               0.000
+            Enforced source period [s]:           0.000
+            Simulation type:                    force
+            Receiver file type:                 stations
+            Sum seismograms?                     F
+            Sum wavefields?                      F
+            Time extrapolation scheme:          newmark2
+            Seismogram sampling rate [s]:         0.000
+            Dump kin./pot. energy?               F
+            Dump global snaps?                   F
+            Dump strain?                         T
+            Wavefield dumping type:             displ_only  
+            First GLL to save in strains:        1
+            Last GLL to save in strains:         3
+            First GLL to save in strains:        1
+            Last GLL to save in strains:         3
+            Samples per period for strains:       4.000
+            Source dumping type:                igno
+            Add heterogeneous region?            F
+            Perform extensive mesh tests?        F
+            Output format (seism., wavefields): netcdf
+        ===============================================================
+ MAIN: Reading mesh database...............................
+
+   General numerical input/output parameters================
+     grid pts/wavelngth =   1.5000000000000000     
+     source period [s]  =   50.000000000000000     
+     courant number     =  0.60000002384185791     
+     time step [s]      =   1.7267183353332934E-003
+ Checking value order in external model
+  Value ' rad'  is in column  1
+  Value ' vpv'  is in column  3
+  Value ' vsv'  is in column  4
+  Value ' rho'  is in column  2
+  Value ' qka'  is in column  5
+  Value ' qmu'  is in column  6
+  Value ' eta'  is in column  9
+  Value ' vph'  is in column  7
+  Value ' vsh'  is in column  8
+ Model in file ./external_model.bm has   220 layers and is anisotropic and anelastic...
+ Depths/radii are assumed to be defined in meters
+ Layers in file ./external_model.bm start in the core
+ Reordering layers to start at the surface
+ Checking for discontinuities in the external velocity model
+  2nd order disc. at radius   3389490.0, layer:     2, gradient step vp:     7.50000, gradient step vs:     9.00000
+  2nd order disc. at radius   3389480.0, layer:     3, gradient step vp:     2.00000, gradient step vs:     2.00000
+  2nd order disc. at radius   3389470.0, layer:     4, gradient step vp:    10.00000, gradient step vs:     5.00000
+  1st order disc. at radius   3389420.0, layer:     9
+  1st order disc. at radius   3388500.0, layer:    20
+  1st order disc. at radius   3342278.0, layer:    31
+  1st order disc. at radius   3304500.0, layer:    40
+  1st order disc. at radius   1718000.0, layer:   130
+ External model has   9 discontinuities
+ 
+ Creating interpolation objects
+    idom, upper_layer, lower_layer,      r(ul),      r(ll)
+       1            1            2   3389500.0   3389490.0
+       2            2            3   3389490.0   3389480.0
+       3            3            4   3389480.0   3389470.0
+       4            4            9   3389470.0   3389420.0
+       5           10           20   3389420.0   3388500.0
+       6           21           31   3388500.0   3342278.0
+       7           32           40   3342278.0   3304500.0
+       8           41          130   3304500.0   1718000.0
+       9          131          220   1718000.0         0.0
+ 
+
+   Background model=========================================
+     bkgrdmodel = external
+     radius [m] =    3389500.0000000000     
+     have_fluid =  T
+
+   Min/max grid spacing=====================================
+     hmin (global) [m]   :    1.7267316287825447     
+     hmax (global) [m]   :    41735.048262850971     
+     min_distance_dim [m]:   0.17267316287825449     
+
+   Axialogy=================================================
+
+     Global total axial elements:         232
+     Global solid axial elements:          50
+     Global fluid axial elements:         182
+
+
+ MAIN: Initializing grid...................................
+ MAIN: Starting wave preparation...........................
+ 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ++++++++    SEISMIC WAVE PROPAGATION: SOLID-FLUID CASE  ++++++++
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+   *****************GIVEN SOURCE PARAMETERS*****************
+      Magnitude [Nm]:             1.000E+20
+      Excitation type:        dipole      thetaforce
+      Depth [km]:                 0.000E+00
+      Colat. [deg]:               0.000E+00
+      Long. [deg]:                0.000E+00
+      Source time function:       gauss_0
+      Dom. period mesh [s]:         50.0000
+   *********************************************************
+ 
+    construction of mapping for kwf output...
+    ...solid part...
+    ...fluid part...
+ local point number:                   0
+ after removing duplicates:            0
+ compression:                             NaN
+    .... constructing midpoint grid for kwf output
+    .... constructing finite element grid for kwf output
+    .... constructing spectral element grid for kwf output
+    .... finished construction of mapping for kwf output
+
+     Using period of the mesh:   50.000000000000000     
+
+     desired simulation length  :  1800.00   seconds
+     offered simulation length  :  1800.00   seconds
+     number time loop iterations: 1042440
+
+     desired seismogram sampling:     0.00   seconds
+     offered seismogram sampling:     0.00   seconds
+     ...that is, every          :       1 timesteps
+     number of samples          : 1042441
+ 
+   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+   SOURCE TIME FUNCTION: gauss_0
+    dumping wavefields at sampling rate and deltat:   4.0000915126607266        12.499714029477710     
+    coarsest dump every        7239 th time step, dt:   12.499714029477710     
+ 
+   SHIFT FACTOR of source time function [s]:   87.4980011    
+    # SEM, seis, coarse points per shift factor:   50673.0000       50673.0000       7.00000000    
+    # simul. half widths per shift factor:   1.74996006    
+   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ 
+
+     Number of wavefield dumps  :     145
+     ...approximately every     :   12.50   seconds
+     ...that is, every          :    7239  timestep
+     Define limitation of GLL points in the dumped fields:
+       ibeg=           0 iend=           4
+       jbeg=           0 jend=           4
+       # points saved within an element:          25
+
+  ::::::::: BACKGROUND MODEL & PRECOMPUTED MATRICES:::::::
+ WARNING: boundary term not all that precise!
+  Term should equal four for 2 boundaries (i.e. int (sin) )
+  Actual numerical value:   2.0000000000000000     
+  :::::::DONE BACKGROUND MODEL & PRECOMPUTED MATRICES:::::
+  *****************************************
+     Welcome to the source term calculator 
+  *****************************************
+  locating the source....
+   Proc 00  found it:
+     depth asked for [km]:   0.0000000000000000     
+     depth offered   [km]:  -1.3969838619232178E-012
+     difference      [km]:   1.3969838619232178E-012
+   computing DIPOLE Source with...
+   ...horizontal single thetaforce
+  number of elements with non-zero source term: 1
+  *********************************
+     End of source term calculator
+  *********************************
+   dumping strain mesh and associated fields...
+    ...collecting coordinates...
+   strain dump: only elementwise displacement
+   locating surface elements and generic receivers...
+   ensuring uniqueness in generic receiver locations...
+   Proc 00 has the  epicenter at    0.000 degrees.
+   Proc 00 has the    equator at   90.000 degrees.
+   Proc 01 has the   antipode at  180.000 degrees.
+   reading receiver colatitudes and longitudes from STATIONS...
+   ...counted number of stations:         129
+   ...out of which are unique stations:         129
+
+   maximal receiver location error [m]:   295.88588214977875     
+
+   Calculating prefactors for cylindrical components...
+
+   checking input parameters for consistency...
+
+ :::::::::::::::: SIMULATION PARAMETERS::::::::::::::::::::::::
+   Code information_____________________________________
+      git hash          :   9f0be2f-160-g1c12 
+      username          :   markdobush        
+      hostname          :   MacBook-Pro-Mark.l
+      compiler          :   gfortran          
+      compilerversion   :   15.2.0            
+      FFLAGS            :   FFLAGS = -g -fbacktrace -fbounds-check -frange-chec
+      CFLAGS            :   CFLAGS = -g -fbacktrace -Wall -Wno-implicit-functio
+      LDFLAGS           :   LDFLAGS = -g -fbacktrace -Wall                     
+      OpenMP            :                  no 
+   Global mesh information______________________________
+      Background model  :   external          
+      # discontinuities :             9
+      Have fluid region ?             T
+      Outer rad.     [m]:   3.38950E+06
+      Inner rad.     [m]:   1.60332E+06
+      Polynomial order  :             4
+      # control nodes   :         66057
+      Total elements    :         21472
+      Total # points    :        536800
+      # global numbers  :        346833
+      # axial elements  :           116
+      # curved elements :         12320
+      # linear elements :          7744
+      # mixed elements  :          1408
+      Min. distance  [m]:   1.72673E-01
+      Min. distance/r0  :   5.09436E-08
+   Grid spacing, velocities etc.________________________
+      Min. (pre,comp)[m]:    1.727E+00    1.727E+00
+      Max. (pre,comp)[m]:    4.174E+04    4.174E+04
+      Min. vp[m/s], r[m]:    2.650E+02    3.390E+06
+      Min. vs[m/s], r[m]:    0.000E+00    0.000E+00
+      Max. vp[m/s], r[m]:    9.635E+03    1.718E+06
+      Max. vs[m/s], r[m]:    5.091E+03    1.718E+06
+      Max. lead time [s]:   8.26584E+00
+      r [m], theta [deg]:    3.389E+06    3.913E+01
+      Min. lead time [s]:   6.18156E-01
+      r [m], theta [deg]:    3.145E+06    4.774E+01
+   Solid-Fluid configuration____________________________
+      S/F elements      :         13200     8272
+      S/F # points      :        330000   206800
+      S/F global numbers:        214469   133069
+      S/F # axial elems :            25       91
+      # S/F boundary els:           176
+      S/F curved elems  :         11968      352
+      S/F linear elems  :             0     7744
+      S/F mixed elements:          1232      176
+   Solid message passing_________________________________
+      # processors      :             2
+      max. sent messages:             1
+      max. sent size    :           101
+      nax. recv messages:             1
+      max. recv size    :           101
+   Fluid message passing_________________________________
+      max. sent messages:             1
+      max. sent size    :           365
+      nax. recv messages:             1
+      max. recv size    :           365
+   Source information___________________________________
+      Source type       :   dipole    thetaforce
+      Source depth   [m]:   3.38950E+06
+      Source colat [deg]:   0.00000E+00
+      Source long  [deg]:   0.00000E+00
+      Magnitude    [N/m]:   1.00000E+20
+      Source time fct   :              gauss_0
+      Dom. period    [s]:   5.00000E+01
+   Receiver information___________________________________
+       Receiver file type             stations
+       Sum seismograms  :             F
+   General numerical parameters_________________________
+      # elems/wavelength:   1.50000E+00
+      Courant number    :   6.00000E-01
+      Time step [s]     :   1.72672E-03
+      # iterations      :       1042440
+      seismo length [s] :   1.80000E+03
+      time extrapolation:             newmark2
+   Input/Output information_____________________________
+      Output data path  :               ./Data
+      Output info path  :               ./Info
+          Sum wavefields:             F
+      Dump energy       :             F
+      XDMF VTK          :             F
+      Dump wavefields   :             T
+      Dumping type      :         displ_only  
+      dump interval [s] :   1.24997E+01
+      # wavefield dumps :          7239
+      Need fluid displ. :             T
+
+ :::::::::::::::: END SIMULATION PARAMETERS::::::::::::::::::::
+
+
+   wrote general simulation info into "simulation.info"
+  Writing simulation info to netcdf file attributes
+     ... wrote file param_post_processing
+ done preparing waves.
+ MAIN: Deallocating arrays not needed in the time loop.....
+   deallocating large mesh arrays...
+   Done deallocating mesh arrays.
+ MAIN: Finish preparation of NetCDF file...................
+       0: opened file
+       1: opened file
+ MAIN: Starting wave propagation...........................
+
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+ TTTT  2nd-order, acceleration-driven Newmark time scheme TTTTT
+ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+
+ ************ S T A R T I N G   T I M E   L O O P *************
+  time step:   100; t=    0.17 s (  0.0%)
+  time step:   200; t=    0.35 s (  0.0%)
+  time step:   300; t=    0.52 s (  0.0%)
+  time step:   400; t=    0.69 s (  0.0%)
+  time step:   500; t=    0.86 s (  0.0%)
+  time step:   600; t=    1.04 s (  0.1%)
+  time step:   700; t=    1.21 s (  0.1%)
+  time step:   800; t=    1.38 s (  0.1%)
+  time step:   900; t=    1.55 s (  0.1%)
+  time step:  1000; t=    1.73 s (  0.1%)
+  time step:  1100; t=    1.90 s (  0.1%)
+  time step:  1200; t=    2.07 s (  0.1%)
+  time step:  1300; t=    2.24 s (  0.1%)
+  time step:  1400; t=    2.42 s (  0.1%)
+  time step:  1500; t=    2.59 s (  0.1%)
+  time step:  1600; t=    2.76 s (  0.2%)
+  time step:  1700; t=    2.94 s (  0.2%)
+  time step:  1800; t=    3.11 s (  0.2%)
+  time step:  1900; t=    3.28 s (  0.2%)
+  time step:  2000; t=    3.45 s (  0.2%)
+  time step:  2100; t=    3.63 s (  0.2%)
+  time step:  2200; t=    3.80 s (  0.2%)
+  time step:  2300; t=    3.97 s (  0.2%)
+  time step:  2400; t=    4.14 s (  0.2%)
+  time step:  2500; t=    4.32 s (  0.2%)
+  time step:  2600; t=    4.49 s (  0.2%)
+  time step:  2700; t=    4.66 s (  0.3%)
+  time step:  2800; t=    4.83 s (  0.3%)
+  time step:  2900; t=    5.01 s (  0.3%)
+  time step:  3000; t=    5.18 s (  0.3%)
+  time step:  3100; t=    5.35 s (  0.3%)
+  time step:  3200; t=    5.53 s (  0.3%)
+  time step:  3300; t=    5.70 s (  0.3%)
+  time step:  3400; t=    5.87 s (  0.3%)
+  time step:  3500; t=    6.04 s (  0.3%)
+  time step:  3600; t=    6.22 s (  0.3%)
+  time step:  3700; t=    6.39 s (  0.4%)
+  time step:  3800; t=    6.56 s (  0.4%)
+  time step:  3900; t=    6.73 s (  0.4%)
+  time step:  4000; t=    6.91 s (  0.4%)
+  time step:  4100; t=    7.08 s (  0.4%)
+  time step:  4200; t=    7.25 s (  0.4%)
+  time step:  4300; t=    7.42 s (  0.4%)
+  time step:  4400; t=    7.60 s (  0.4%)
+  time step:  4500; t=    7.77 s (  0.4%)
+  time step:  4600; t=    7.94 s (  0.4%)
+  time step:  4700; t=    8.12 s (  0.5%)
+  time step:  4800; t=    8.29 s (  0.5%)
+  time step:  4900; t=    8.46 s (  0.5%)
+  time step:  5000; t=    8.63 s (  0.5%)
+  time step:  5100; t=    8.81 s (  0.5%)
+  time step:  5200; t=    8.98 s (  0.5%)
+  time step:  5300; t=    9.15 s (  0.5%)
+  time step:  5400; t=    9.32 s (  0.5%)
+  time step:  5500; t=    9.50 s (  0.5%)
+  time step:  5600; t=    9.67 s (  0.5%)
+  time step:  5700; t=    9.84 s (  0.5%)
+  time step:  5800; t=   10.01 s (  0.6%)
+  time step:  5900; t=   10.19 s (  0.6%)
+  time step:  6000; t=   10.36 s (  0.6%)
+  time step:  6100; t=   10.53 s (  0.6%)
+  time step:  6200; t=   10.71 s (  0.6%)
+  time step:  6300; t=   10.88 s (  0.6%)
+  time step:  6400; t=   11.05 s (  0.6%)
+  time step:  6500; t=   11.22 s (  0.6%)
+  time step:  6600; t=   11.40 s (  0.6%)
+  time step:  6700; t=   11.57 s (  0.6%)
+  time step:  6800; t=   11.74 s (  0.7%)
+  time step:  6900; t=   11.91 s (  0.7%)
+  time step:  7000; t=   12.09 s (  0.7%)
+  time step:  7100; t=   12.26 s (  0.7%)
+  time step:  7200; t=   12.43 s (  0.7%)
+  time step:  7300; t=   12.61 s (  0.7%)
+  time step:  7400; t=   12.78 s (  0.7%)
+  time step:  7500; t=   12.95 s (  0.7%)
+  time step:  7600; t=   13.12 s (  0.7%)
+  time step:  7700; t=   13.30 s (  0.7%)
+  time step:  7800; t=   13.47 s (  0.7%)
+  time step:  7900; t=   13.64 s (  0.8%)
+  time step:  8000; t=   13.81 s (  0.8%)
+  time step:  8100; t=   13.99 s (  0.8%)
+  time step:  8200; t=   14.16 s (  0.8%)
+  time step:  8300; t=   14.33 s (  0.8%)
+  time step:  8400; t=   14.50 s (  0.8%)
+  time step:  8500; t=   14.68 s (  0.8%)
+  time step:  8600; t=   14.85 s (  0.8%)
+  time step:  8700; t=   15.02 s (  0.8%)
+  time step:  8800; t=   15.20 s (  0.8%)
+  time step:  8900; t=   15.37 s (  0.9%)
+  time step:  9000; t=   15.54 s (  0.9%)
+  time step:  9100; t=   15.71 s (  0.9%)
+  time step:  9200; t=   15.89 s (  0.9%)
+  time step:  9300; t=   16.06 s (  0.9%)
+  time step:  9400; t=   16.23 s (  0.9%)
+  time step:  9500; t=   16.40 s (  0.9%)
+  time step:  9600; t=   16.58 s (  0.9%)
+  time step:  9700; t=   16.75 s (  0.9%)
+  time step:  9800; t=   16.92 s (  0.9%)
+  time step:  9900; t=   17.09 s (  0.9%)
+  time step: 10000; t=   17.27 s (  1.0%)
+  time step: 10100; t=   17.44 s (  1.0%)
+  time step: 10200; t=   17.61 s (  1.0%)
+  time step: 10300; t=   17.79 s (  1.0%)
+  time step: 10400; t=   17.96 s (  1.0%)
+  time step: 10500; t=   18.13 s (  1.0%)
+  time step: 10600; t=   18.30 s (  1.0%)
+  time step: 10700; t=   18.48 s (  1.0%)
+  time step: 10800; t=   18.65 s (  1.0%)
+  time step: 10900; t=   18.82 s (  1.0%)
+  time step: 11000; t=   18.99 s (  1.1%)
+  time step: 11100; t=   19.17 s (  1.1%)
+  time step: 11200; t=   19.34 s (  1.1%)
+  time step: 11300; t=   19.51 s (  1.1%)
+  time step: 11400; t=   19.68 s (  1.1%)
+  time step: 11500; t=   19.86 s (  1.1%)
+  time step: 11600; t=   20.03 s (  1.1%)
+  time step: 11700; t=   20.20 s (  1.1%)
+  time step: 11800; t=   20.38 s (  1.1%)
+  time step: 11900; t=   20.55 s (  1.1%)
+--------------------------------------------------------------------------
+prterun noticed that process rank 1 with PID 95101 on node MacBook-Pro-Mark exited on
+signal 9 (Killed: 9).
+--------------------------------------------------------------------------
