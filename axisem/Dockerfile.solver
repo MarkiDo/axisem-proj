@@ -1,0 +1,23 @@
+FROM ubuntu:20.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+# Allow OpenMPI to run as root inside the container
+ENV OMPI_ALLOW_RUN_AS_ROOT=1
+ENV OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
+
+RUN apt-get update && apt-get install -y \
+    # Runtime libraries — versions must match the WSL-compiled axisem binary
+    libopenmpi3 \
+    openmpi-bin \
+    libnetcdff7 \
+    libnetcdf15 \
+    libgfortran5 \
+    # Build tools — submit.csh runs "make -j" internally
+    gfortran \
+    libopenmpi-dev \
+    make \
+    # submit.csh is a csh script
+    csh \
+    # submit.csh calls "git describe" for version info
+    git \
+    && rm -rf /var/lib/apt/lists/*
