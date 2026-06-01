@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\markdob\\\\Projects\\\\axisem-proj\\\\axisem\\\\SOLVER\\\\Mars\")",
+      "Bash(ls \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\markdob\\\\Projects\\\\axisem-proj\\\\axisem\\\\SOLVER\\\\Mars\\\\PX\")",
+      "Bash(ls \"\\\\\\\\wsl.localhost\\\\Ubuntu\\\\home\\\\markdob\\\\Projects\\\\axisem-proj\\\\axisem\\\\SOLVER\\\\Mars\\\\PZ\")",
+      "Bash(mv /home/markdob/Projects/axisem/bm-converter /home/markdob/Projects/axisem-proj/bm-converter)",
+      "Bash(rmdir /home/markdob/Projects/axisem)",
+      "Bash(python3 -m venv .venv)",
+      "Bash(.venv/bin/pip install *)",
+      "Bash(cd /home/markdob/Projects/axisem-proj/bm-converter && rm -rf .venv && python3 -m venv .venv && .venv/bin/pip install -e . -q && echo \"OK\")",
+      "Bash(.venv/bin/bm-convert /home/markdob/Projects/axisem-proj/axisem/MESHER/Models/mars_1/Model_1.txt -o /tmp/bm-test)",
+      "Read(//tmp/bm-test/**)",
+      "Bash(conda run *)",
+      "Read(//home/markdob/miniconda3/**)",
+      "Bash(/home/markdob/miniconda3/bin/python3 -c \"import obspy; print\\(obspy.__version__\\)\")"
+    ],
+    "additionalDirectories": [
+      "/home/markdob/Projects/axisem-proj/bm-converter/.venv"
+    ]
+  }
+}

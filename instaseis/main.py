@@ -3,9 +3,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 from obspy import UTCDateTime
+from obspy.signal.filter import bandpass
 
 _here = os.path.dirname(os.path.abspath(__file__))
-db = instaseis.open_db(os.path.join(_here, 'content', 'model1'))
+db = instaseis.open_db(os.path.join(_here, 'content', 'model_1_25'))
 print(db)
 
 origin = UTCDateTime('2022-05-04 23:23:07')
@@ -20,7 +21,7 @@ evdp_m = evdp*1000.
 source = instaseis.Source.from_strike_dip_rake(latitude=evla,longitude=evlo,depth_in_m=evdp_m,strike=48,dip=43,rake=92,M0=5e15)
 receiver = instaseis.Receiver(latitude=stla,longitude=stlo,network='XB',station='ELYSE')
 
-st = db.get_seismograms(source=source,receiver=receiver,components='ZNE',kind='displacement')
+st = db.get_seismograms(source=source,receiver=receiver,components='ZNE',kind='displacement',dt=0.05)
 for tr in st:
     tr.stats.starttime = origin
     print(tr)
@@ -32,6 +33,7 @@ fig, axes = plt.subplots(3, 1, figsize=(12, 7), sharex=True)
 
 for ax, comp in zip(axes, components):
     tr = st.select(component=comp)[0]
+    # tr.data = bandpass(tr.data, 0.1, 1.0, tr.stats.sampling_rate, corners=4, zerophase=True)
     times = tr.times(reftime=origin)
     ax.plot(times, tr.data * 1e9, color='black', linewidth=0.8)
     ax.set_ylabel(f'{comp}\n(nm)', fontsize=10)
