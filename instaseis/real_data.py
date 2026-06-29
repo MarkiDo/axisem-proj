@@ -10,17 +10,17 @@ from obspy.signal.rotate import rotate2zne
 NET = 'XB'
 STA = 'ELYSE'
 LOC = '02'
-CHAN = 'BH*'
 
-FREQMIN = 0.1
-FREQMAX = 1.0
-CORNERS = 4
+DEFAULT_CHANNELS = ('BHU', 'BHV', 'BHW')
+DEFAULT_FREQMIN = 0.1
+DEFAULT_FREQMAX = 1.0
+DEFAULT_CORNERS = 4
 
 
-def _download_mseed(start, end):
+def _download_mseed(start, end, chan):
     url = (
         "https://service.iris.edu/fdsnws/dataselect/1/query?"
-        f"net={NET}&sta={STA}&loc={LOC}&cha={CHAN}&"
+        f"net={NET}&sta={STA}&loc={LOC}&cha={chan}&"
         f"starttime={start.isoformat()}&endtime={end.isoformat()}&"
         "quality=M&format=miniseed&nodata=404"
     )
@@ -31,9 +31,9 @@ def _download_mseed(start, end):
     return None
 
 
-def _get_inventory(t0, t1):
+def _get_inventory(t0, t1, chan):
     return Client("EARTHSCOPE").get_stations(
-        network=NET, station=STA, location=LOC, channel=CHAN,
+        network=NET, station=STA, location=LOC, channel=chan,
         starttime=t0, endtime=t1, level="response"
     )
 
@@ -43,7 +43,9 @@ def _azi_dip(inv, channel):
     return c.azimuth, c.dip
 
 
-def load_real_zne(origin, pre_event_s=300, post_event_s=3600):
+def load_real_zne(origin, pre_event_s=300, post_event_s=3600,
+                  freqmin=DEFAULT_FREQMIN, freqmax=DEFAULT_FREQMAX,
+                  corners=DEFAULT_CORNERS, channels=DEFAULT_CHANNELS):
     """
     Download InSight VBB data around `origin`, rotate UVW→ZNE,
     remove instrument response (→ displacement), and bandpass-filter.
@@ -51,15 +53,18 @@ def load_real_zne(origin, pre_event_s=300, post_event_s=3600):
     Returns a dict {'Z': (times, data), 'N': ..., 'E': ...} with times
     in seconds relative to `origin`, or None on failure.
     """
-    raw = _download_mseed(origin - pre_event_s, origin + post_event_s)
+    chan_U, chan_V, chan_W = channels
+    chan_wildcard = chan_U[:2] + '*'
+
+    raw = _download_mseed(origin - pre_event_s, origin + post_event_s, chan_wildcard)
     if raw is None:
         return None
 
-    ts_U = raw.select(channel="BHU")
-    ts_V = raw.select(channel="BHV")
-    ts_W = raw.select(channel="BHW")
+    ts_U = raw.select(channel=chan_U)
+    ts_V = raw.select(channel=chan_V)
+    ts_W = raw.select(channel=chan_W)
     if not (ts_U and ts_V and ts_W):
-        print("BHU/BHV/BHW not found in downloaded data:", raw)
+        print(f"{chan_U}/{chan_V}/{chan_W} not found in downloaded data:", raw)
         return None
 
     # Synchronise time windows
@@ -69,15 +74,15 @@ def load_real_zne(origin, pre_event_s=300, post_event_s=3600):
         s.trim(t0, t1)
         s.detrend("linear")
 
-    inv = _get_inventory(t0, t1)
+    inv = _get_inventory(t0, t1, chan_wildcard)
 
     for s in [ts_U, ts_V, ts_W]:
         s.remove_response(inventory=inv, output="DISP",
                           zero_mean=True, taper=True, taper_fraction=0.05)
 
-    U_azi, U_dip = _azi_dip(inv, "BHU")
-    V_azi, V_dip = _azi_dip(inv, "BHV")
-    W_azi, W_dip = _azi_dip(inv, "BHW")
+    U_azi, U_dip = _azi_dip(inv, chan_U)
+    V_azi, V_dip = _azi_dip(inv, chan_V)
+    W_azi, W_dip = _azi_dip(inv, chan_W)
 
     Z, N, E = rotate2zne(
         ts_U[0].data, U_azi, U_dip,
@@ -86,9 +91,9 @@ def load_real_zne(origin, pre_event_s=300, post_event_s=3600):
     )
 
     sr = ts_U[0].stats.sampling_rate
-    Z_bp = bandpass(Z, FREQMIN, FREQMAX, sr, corners=CORNERS, zerophase=True)
-    N_bp = bandpass(N, FREQMIN, FREQMAX, sr, corners=CORNERS, zerophase=True)
-    E_bp = bandpass(E, FREQMIN, FREQMAX, sr, corners=CORNERS, zerophase=True)
+    Z_bp = bandpass(Z, freqmin, freqmax, sr, corners=corners, zerophase=True)
+    N_bp = bandpass(N, freqmin, freqmax, sr, corners=corners, zerophase=True)
+    E_bp = bandpass(E, freqmin, freqmax, sr, corners=corners, zerophase=True)
 
     times = np.arange(len(Z)) / sr + float(t0 - origin)
 
