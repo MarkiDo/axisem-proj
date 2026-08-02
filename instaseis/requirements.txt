@@ -1,0 +1,4 @@
+instaseis
+matplotlib
+numpy
+obspy

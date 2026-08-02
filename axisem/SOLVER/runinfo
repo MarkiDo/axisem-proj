@@ -1,0 +1,6 @@
+GIT_VERSION
+root USER_NAME
+ba270ed5ced4 HOST_NAME
+FFLAGS = -g -fbacktrace -fbounds-check -frange-check -pedantic
+CFLAGS = -g -fbacktrace -Wall -Wno-implicit-function-declaration
+LDFLAGS = -g -fbacktrace -Wall

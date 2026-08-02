@@ -1,0 +1,4 @@
+instaseis/.venv/*
+__pycache__/
+*.pyc
+*.mseed

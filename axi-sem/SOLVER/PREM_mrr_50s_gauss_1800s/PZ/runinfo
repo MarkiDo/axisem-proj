@@ -1,6 +1,0 @@
-9f0be2f-160-g1c12 GIT_VERSION
-markdobush USER_NAME
-MacBook-Pro-Mark.local HOST_NAME
-FFLAGS = -g -fbacktrace -fbounds-check -frange-check -pedantic
-CFLAGS = -g -fbacktrace -Wall -Wno-implicit-function-declaration
-LDFLAGS = -g -fbacktrace -Wall
