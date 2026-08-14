@@ -7,11 +7,11 @@ from obspy.signal.filter import bandpass
 from real_data import load_real_zne
 
 _here = os.path.dirname(os.path.abspath(__file__))
-db = instaseis.open_db(os.path.join(_here, '..', 'axisem', 'SOLVER', 'mars'))
+db = instaseis.open_db(os.path.join(_here, '..', 'axisem', 'SOLVER', 'model_155_30'))
 print(db)
 
-FREQMIN = 0.1
-FREQMAX = 1.0
+FREQMIN = 0.01   # period 100s
+FREQMAX = 0.0333 # period 30s (mesh's dominant period)
 CORNERS = 4
 CHANNELS = ('BHU', 'BHV', 'BHW')
 
@@ -19,12 +19,16 @@ origin = UTCDateTime('2022-05-04 23:23:07')
 
 stla = 4.502
 stlo = 135.62
-evlo = 171.9
-evla = -3.0
-evdp = 22.0
+evlo = 165.86
+evla = 3.39
+evdp = 23.0
 evdp_m = evdp*1000.
+dip = 197
+strike = 24
+rake = -68
+M0 = 1e15
 
-source = instaseis.Source.from_strike_dip_rake(latitude=evla,longitude=evlo,depth_in_m=evdp_m,strike=48,dip=43,rake=92,M0=5e15)
+source = instaseis.Source.from_strike_dip_rake(latitude=evla,longitude=evlo,depth_in_m=evdp_m,strike=strike,dip=dip,rake=rake,M0=M0)
 receiver = instaseis.Receiver(latitude=stla,longitude=stlo,network='XB',station='ELYSE')
 
 st = db.get_seismograms(source=source,receiver=receiver,components='ZNE',kind='displacement',dt=0.05)
@@ -51,32 +55,34 @@ components = ['Z', 'N', 'E']
 
 def _make_figure(title_suffix, show_synthetic, show_real):
     fig, axes = plt.subplots(3, 1, figsize=(12, 7), sharex=True)
-    ref_times = None
+    xlim = None
 
     for ax, comp in zip(axes, components):
         tr = st.select(component=comp)[0]
         times = tr.times(reftime=origin)
-        if ref_times is None:
-            ref_times = times
 
         if show_synthetic:
             syn_label = f'Synthetic (shift={SYNTHETIC_TIME_SHIFT:+.1f}s)' if SYNTHETIC_TIME_SHIFT else 'Synthetic'
             ax.plot(times + SYNTHETIC_TIME_SHIFT, tr.data * 1e9, color='black', linewidth=0.8, label=syn_label)
+            syn_span = (times[0] + SYNTHETIC_TIME_SHIFT, times[-1] + SYNTHETIC_TIME_SHIFT)
+            xlim = syn_span if xlim is None else (min(xlim[0], syn_span[0]), max(xlim[1], syn_span[1]))
 
         if show_real and real is not None:
             t_real, d_real = real[comp]
             ax.plot(t_real, d_real * 1e9, color='red', linewidth=0.8, alpha=0.7, label='Observed')
+            real_span = (t_real[0], t_real[-1])
+            xlim = real_span if xlim is None else (min(xlim[0], real_span[0]), max(xlim[1], real_span[1]))
 
         ax.set_ylabel(f'{comp}\n(nm)', fontsize=10)
         ax.axhline(0, color='gray', linewidth=0.5, linestyle='--')
         ax.grid(True, alpha=0.3)
-        ax.set_xlim(ref_times[0], ref_times[-1])
+        ax.set_xlim(*xlim)
         ax.legend(loc='upper right', fontsize=8)
 
     axes[-1].set_xlabel('Time relative to origin (s)', fontsize=10)
     fig.suptitle(
         f'InSight ELYSE — Mars S1222a  |  {origin.strftime("%Y-%m-%d %H:%M:%S")} UTC\n'
-        f'Strike/Dip/Rake: 48/43/92  |  Depth: {evdp} km  |  Model1'
+        f'Strike/Dip/Rake: {strike}/{dip}/{rake}  |  Depth: {evdp} km  |  Model1'
         + (f'  |  {title_suffix}' if title_suffix else ''),
         fontsize=11
     )
