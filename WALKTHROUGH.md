@@ -55,8 +55,9 @@ previous block left off.
 ## Part 1 — bm-converter: build the `.bm` model
 
 `bm-converter` turns a `Model_N.txt` layer table (depth, Vp, Vs, density, …)
-into an AxiSEM `.bm` file (radius-from-center, SI units, deepest layer
-first).
+into an AxiSEM `.bm` file (depth-from-surface, SI units, surface layer
+first — AxiSEM's external model reader accepts `COLUMNS depth ...` directly
+and converts to radius internally).
 
 ```bash
 cd bm-converter
@@ -66,8 +67,6 @@ bm-convert mars_1/Model_1.txt -o output/
 
 This produces `bm-converter/output/Model_1.bm`. Useful flags:
 - `--name <NAME>` — override the `NAME` header field (ignored for batch runs)
-- `--planet-radius <KM>` — force the planet radius instead of inferring it
-  from the last depth row (Mars ≈ 3389.5 km)
 - `--anelastic`, `--anisotropic` — set those header flags to `T`
 - to convert all models at once instead: `bm-convert mars_1/Model_*.txt -o output/`
 
