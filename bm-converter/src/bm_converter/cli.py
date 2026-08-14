@@ -22,13 +22,6 @@ def main() -> None:
         help="Model name written into the .bm header (default: input filename stem). "
              "Ignored when converting multiple files.",
     )
-    parser.add_argument(
-        "--planet-radius",
-        type=float,
-        default=None,
-        metavar="KM",
-        help="Planet radius in km (default: inferred from max depth in the file)",
-    )
     parser.add_argument("--anelastic", action="store_true", help="Mark model as anelastic")
     parser.add_argument("--anisotropic", action="store_true", help="Mark model as anisotropic")
 
@@ -52,7 +45,6 @@ def main() -> None:
             input_path=input_path,
             output_path=output_path,
             name=name,
-            planet_radius_km=args.planet_radius,
             anelastic=args.anelastic,
             anisotropic=args.anisotropic,
         )
