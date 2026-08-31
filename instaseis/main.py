@@ -1,5 +1,6 @@
 import instaseis
 import matplotlib.pyplot as plt
+from matplotlib.widgets import SpanSelector
 import numpy as np
 import os
 from obspy import UTCDateTime
@@ -21,7 +22,7 @@ stla = 4.502
 stlo = 135.62
 evlo = 165.86
 evla = 3.39
-evdp = 23.0
+evdp = 30.0
 evdp_m = evdp*1000.
 dip = 197
 strike = 24
@@ -57,27 +58,42 @@ def _make_figure(title_suffix, show_synthetic, show_real):
     fig, axes = plt.subplots(3, 1, figsize=(12, 7), sharex=True)
     xlim = None
 
+    dual_scale = show_synthetic and show_real and real is not None
+
     for ax, comp in zip(axes, components):
         tr = st.select(component=comp)[0]
         times = tr.times(reftime=origin)
+        lines, labels = [], []
 
         if show_synthetic:
             syn_label = f'Synthetic (shift={SYNTHETIC_TIME_SHIFT:+.1f}s)' if SYNTHETIC_TIME_SHIFT else 'Synthetic'
-            ax.plot(times + SYNTHETIC_TIME_SHIFT, tr.data * 1e9, color='black', linewidth=0.8, label=syn_label)
+            ln, = ax.plot(times + SYNTHETIC_TIME_SHIFT, tr.data * 1e9, color='black', linewidth=0.8, label=syn_label)
+            lines.append(ln)
+            labels.append(syn_label)
             syn_span = (times[0] + SYNTHETIC_TIME_SHIFT, times[-1] + SYNTHETIC_TIME_SHIFT)
             xlim = syn_span if xlim is None else (min(xlim[0], syn_span[0]), max(xlim[1], syn_span[1]))
+            if dual_scale:
+                ax.tick_params(axis='y', labelcolor='black')
 
         if show_real and real is not None:
             t_real, d_real = real[comp]
-            ax.plot(t_real, d_real * 1e9, color='red', linewidth=0.8, alpha=0.7, label='Observed')
+            # Real amplitudes can be orders of magnitude larger than the synthetic's,
+            # so give it its own y-axis to keep waveform shape/timing comparable.
+            real_ax = ax.twinx() if dual_scale else ax
+            ln, = real_ax.plot(t_real, d_real * 1e9, color='red', linewidth=0.8, alpha=0.7, label='Observed')
+            lines.append(ln)
+            labels.append('Observed')
             real_span = (t_real[0], t_real[-1])
             xlim = real_span if xlim is None else (min(xlim[0], real_span[0]), max(xlim[1], real_span[1]))
+            if dual_scale:
+                real_ax.tick_params(axis='y', labelcolor='red')
+                real_ax.set_ylabel('Observed (nm)', fontsize=9, color='red')
 
         ax.set_ylabel(f'{comp}\n(nm)', fontsize=10)
         ax.axhline(0, color='gray', linewidth=0.5, linestyle='--')
         ax.grid(True, alpha=0.3)
         ax.set_xlim(*xlim)
-        ax.legend(loc='upper right', fontsize=8)
+        ax.legend(lines, labels, loc='upper right', fontsize=8)
 
     axes[-1].set_xlabel('Time relative to origin (s)', fontsize=10)
     fig.suptitle(
@@ -87,6 +103,29 @@ def _make_figure(title_suffix, show_synthetic, show_real):
         fontsize=11
     )
     fig.tight_layout()
+
+    # Drag-select a region on any subplot to zoom the (shared) time axis in;
+    # double-click anywhere on the figure to reset back to the full view.
+    full_xlim = xlim
+
+    def _on_select(xmin, xmax):
+        if xmin == xmax:
+            return
+        axes[-1].set_xlim(xmin, xmax)
+        fig.canvas.draw_idle()
+
+    def _on_click(event):
+        if event.dblclick:
+            axes[-1].set_xlim(*full_xlim)
+            fig.canvas.draw_idle()
+
+    fig._span_selectors = [
+        SpanSelector(ax, _on_select, 'horizontal', useblit=True,
+                     props=dict(alpha=0.2, facecolor='tab:blue'))
+        for ax in axes
+    ]
+    fig.canvas.mpl_connect('button_press_event', _on_click)
+
     return fig
 
 
