@@ -8,7 +8,7 @@ from obspy.signal.filter import bandpass
 from real_data import load_real_zne
 
 _here = os.path.dirname(os.path.abspath(__file__))
-db = instaseis.open_db(os.path.join(_here, '..', 'axisem', 'SOLVER', 'model_155_30'))
+db = instaseis.open_db('https://vvwdh8db-8000.eun1.devtunnels.ms/')
 print(db)
 
 FREQMIN = 0.01   # period 100s
