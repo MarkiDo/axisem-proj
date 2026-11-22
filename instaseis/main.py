@@ -8,7 +8,7 @@ from obspy.signal.filter import bandpass
 from real_data import load_real_zne
 
 _here = os.path.dirname(os.path.abspath(__file__))
-db = instaseis.open_db(os.path.join(_here, '..', 'axisem', 'SOLVER', 'model_155_30'))
+db = instaseis.open_db(os.path.join(_here, '..', 'axisem', 'SOLVER', 'model_4'))
 print(db)
 
 FREQMIN = 0.01   # period 100s
@@ -22,7 +22,7 @@ stla = 4.502
 stlo = 135.62
 evlo = 165.86
 evla = 3.39
-evdp = 30.0
+evdp = 20.0
 evdp_m = evdp*1000.
 dip = 197
 strike = 24
