@@ -175,7 +175,13 @@ db = instaseis.open_db(os.path.join(_here, '..', 'axisem', 'SOLVER', 'mars'))
 conda activate instaseis
 python instaseis/main.py
 ```
-
+або
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install instaseis
+python instaseis/main.py
+```
 Скрипт виконає:
 1. Відкриє базу даних `mars`, побудовану вище.
 2. Побудує `Source` (механізм strike/dip/rake) і `Receiver` (станція
