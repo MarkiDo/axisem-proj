@@ -3,4 +3,4 @@ __pycache__/
 *.pyc
 *.mseed
 *.DS_Store
-/axiseis/SOLVER/MESHES/*
+axiseis/SOLVER/MESHES/*
